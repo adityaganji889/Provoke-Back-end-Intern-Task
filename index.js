@@ -27,8 +27,8 @@ app.get("/getByPostId/:id", async (req, res) => {
   let obj1 = obj.filter((item)=>{
     return item!==undefined
   })
-  if(obj1){
-    res.send(obj1);
+  if(obj1[0]){
+    res.send(obj1[0]);
   }
   else{
     res.send({msg: "No records to display"})
